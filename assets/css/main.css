@@ -1,0 +1,623 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --primary-gradient: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+  --seconary-gradient: linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #6b8dd6 48%,
+    #8e37d7 100%
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serifs;
+  line-height: 1.2;
+  overflow-x: hidden;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+
+/* Utility */
+.btn-red {
+  border: 1px solid var(--red);
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+  color: var(--red);
+}
+.lead {
+  font-size: 5rem;
+}
+.grad_bg {
+  background: var(--seconary-gradient) !important;
+  padding: 1.2rem 3.8rem;
+  color: #fff;
+}
+.btn-white {
+  border: 2px solid #fff;
+  padding: 0.8rem 1.4rem;
+  color: #fff;
+  border-radius: 40px;
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.btn-special {
+  background: var(--red);
+  color: #fff;
+  border-radius: 40px;
+  padding: 0.6rem 2.4rem;
+  font-size: 1.4rem;
+}
+/* Nabvar */
+nav {
+  display: flex;
+  padding: 0.5rem 0;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  background: #fff;
+}
+nav .nav_brand {
+  padding: 0.4rem 1.9rem;
+}
+nav .navbar ul {
+  display: flex;
+}
+nav .navbar ul li {
+  padding: 1rem 1.5rem;
+}
+
+/* Showcase */
+.showcase {
+  background: linear-gradient(
+      60deg,
+      rgba(54, 56, 58, 0.196) 0%,
+      rgba(22, 29, 36, 0.196) 100%
+    ),
+    url("https://www.masaischool.com/static/posters/banner_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 120%;
+
+  height: 110vh;
+  width: 100%;
+}
+
+.showcase .showcase-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 7rem 5rem;
+}
+.showcase .showcase-content h1 {
+  font-size: 4.5rem;
+  text-align: right;
+  color: white;
+  font-weight: 600;
+}
+.showcase .showcase-content p {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: white;
+  margin-top: 4rem;
+}
+
+/* DESCRIPTION */
+.description {
+  max-width: 100%;
+  padding: 1.5rem;
+}
+.desc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.desc-grid div {
+  text-align: center;
+  padding: 2rem;
+}
+.desc-grid div img {
+  height: 10rem;
+}
+.desc-grid div h2 {
+  font-size: 1.7rem;
+  color: #212529;
+  margin: 1.2rem 0;
+  font-weight: 400;
+}
+.desc-grid div p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Schedule */
+.schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 4rem;
+  background: var(--primary-gradient);
+}
+.schedule > h2 {
+  font-size: 2.6rem;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+.schedule .schedule-content div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.schedule .schedule-content div div {
+  display: flex;
+  background: #fff;
+  border-radius: 5px;
+  padding: 2.8rem 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #3584a7;
+}
+
+.schedule .schedule-content div div h2 {
+  font-weight: 200;
+  font-size: 1.3rem;
+}
+
+.schedule .schedule-content div div p {
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+/* campus */
+.campus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 4rem;
+  background: #fff;
+}
+.campus > h2 {
+  font-size: 2.4rem;
+  color: var(--dark);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+.campus > p {
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.campus .campus-content div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.8rem;
+}
+.campus .campus-content div div {
+  display: flex;
+  background: #fff;
+  border-radius: 5px;
+  max-width: 27rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #3584a7;
+  margin: auto;
+}
+.campus .campus-content div div div {
+  padding: 15px;
+  background: #f8f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.campus .campus-content div div p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: var(--secondary);
+}
+
+/* Courses */
+
+.course {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f8f9fa;
+  padding: 4rem 3rem;
+}
+.course .course-content > h2 {
+  color: var(--dark);
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 1.8rem;
+}
+.course .course-content .course_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.course .course-content .course_grid > div {
+  background: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.course .course-content .course_grid div div h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.course .course-content .course_grid div div.grid_2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.course .course-content .course_grid > div > div > div {
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.grid_2 div p:nth-child(1) {
+  font-size: 1rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+.grid_2 div p:nth-child(2) {
+  font-size: 1.5rem;
+  color: black;
+}
+.new {
+  background: var(--danger);
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+}
+.course .course-content .course_grid > div > div:nth-child(3) {
+  border-top: 1px solid #ddd;
+  margin: 0px 1rem;
+  text-align: right;
+}
+.course .course-content .course_grid > div > div:nth-child(3) input {
+  background: var(--secondary);
+  border-radius: 30px;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  margin: 1rem 0;
+  border: none;
+  font-size: 1.1rem;
+}
+
+/* Hiring */
+.hiring {
+  max-width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.hiring h2 {
+  font-weight: 300;
+  font-size: 2.7rem;
+  padding: 2rem 0;
+}
+.hiring div {
+  display: flex;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.hiring div img {
+  max-width: 120px;
+}
+
+/* Payment */
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  background: var(--primary-gradient);
+  padding: 4rem 4rem;
+}
+.payment h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.payment > div {
+  display: grid;
+  margin-top: 2rem;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.payment > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  background: #fff;
+  align-items: center;
+}
+.payment > div > div h2 {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+.payment > div > div hr {
+  background: #ddd;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.payment > div > div p {
+  font-size: 1.8rem;
+  margin: 0.2rem 0;
+  color: #000;
+}
+.payment > div > div p.blue {
+  font-size: 3rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #3584a7;
+}
+.blue {
+  color: #3584a7;
+}
+.payment > div > div > span {
+  font-size: 1.3rem;
+  padding: 0 2rem;
+  margin: 1rem 0;
+}
+.red {
+  color: var(--red);
+  font-weight: 400;
+}
+
+/* Admission */
+.admission {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 3rem;
+}
+.admission h2 {
+  color: var(--dark);
+  font-size: 2.54rem;
+  font-weight: 300;
+}
+.admission span {
+  color: #000;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  font-weight: 300;
+  padding: 0 4rem;
+}
+.admission p {
+  font-size: 1.75rem;
+  margin-top: 1rem;
+}
+.admission div.grid_3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+}
+.admission div.grid_2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.admission div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.admission div img {
+  background: var(--primary-gradient);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 2rem;
+}
+.admission div > div > span {
+  color: var(--secondary);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.admission div > div > p {
+  font-size: 1.5rem;
+}
+.admission div.grid_2 > div > p {
+  color: var(--secondary);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.admission div.grid_2 > div > span {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+/* Footer */
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  border-top: 1px solid #ddd;
+}
+.main-footer ul {
+  display: flex;
+}
+.main-footer ul li {
+  padding: 1.5rem 1.2rem;
+}
+.main-footer ul li a {
+  color: var(--blue);
+}
+.main-footer ul li i {
+  color: var(--gray-dark);
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: static;
+  }
+
+  nav .navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* showcase */
+  .showcase {
+    background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  }
+  .showcase .showcase-content {
+    max-width: 90%;
+    align-items: center;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  .showcase .showcase-content h1 {
+    text-align: center;
+    padding: 1rem;
+  }
+  .showcase .showcase-content p {
+    font-size: 2rem;
+  }
+
+  /* desc */
+  .desc-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* schedule */
+  .schedule .schedule-content div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .lead {
+    font-size: 4.5rem;
+  }
+
+  /* Campus */
+  .campus .campus-content div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* course */
+  .course .course-content .course_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Hiring */
+  .hiring div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hiring div img {
+    max-width: 170px;
+    margin-top: 0.5rem;
+  }
+
+  /* Payment */
+  .payment > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* addmission */
+  .admission div.grid_3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .admission div.grid_2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* footer */
+  .main-footer {
+    flex-direction: column;
+  }
+}
